@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const MOVESPEED = 500
 const BULLETSPEED = 2000
-const BULLET = preload("res://Bullet.tscn")
+const BULLET = preload("res://Player/Bullet.tscn")
 
 func _physics_process(delta):
 	var motion = Vector2()

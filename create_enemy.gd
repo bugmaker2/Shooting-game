@@ -1,5 +1,5 @@
 extends Node2D
-const ENEMY = preload("res://Enemy.tscn")
+const ENEMY = preload("res://Player/Enemy.tscn")
 
 var rng = RandomNumberGenerator.new()
 func _ready():
