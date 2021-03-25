@@ -36,11 +36,17 @@ script = ExtResource( 4 )
 [node name="Wall" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, 65535, 0, 0, 16, 0, 0, 131071, 0, 0, 65552, 0, 0, 196607, 0, 0, 131088, 0, 0, 262143, 0, 0, 196624, 0, 0, 327679, 0, 0, 262160, 0, 0, 393215, 0, 0, 327696, 0, 0, 458751, 0, 0, 393232, 0, 0, 524287, 0, 0, 458768, 0, 0, 589823, 0, 0, 524304, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 720895, 0, 0, 655360, 0, 0 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.554
 autostart = true
 
 [node name="player" parent="." instance=ExtResource( 1 )]
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
